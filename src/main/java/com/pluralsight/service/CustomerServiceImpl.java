@@ -10,7 +10,11 @@ import java.util.List;
 //we're hard coding some stuff here but then later spring will help us
 //add implementation code
 public class CustomerServiceImpl implements CustomerService {
-    private CustomerRepository customerRepository = new HibernateCustomerRepositoryImpl();
+    private CustomerRepository customerRepository;
+
+    public CustomerServiceImpl(CustomerRepository repo){
+        this.customerRepository = repo;
+    }
 
     @Override
     public List<Customer> findAll(){
