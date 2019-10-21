@@ -12,6 +12,10 @@ public class CustomerServiceImpl implements CustomerService {
 
     private CustomerRepository customerRepository;
 
+    public CustomerServiceImpl(CustomerRepository repo){
+        this.customerRepository = repo;
+    }
+
     public void setCustomerRepository(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
