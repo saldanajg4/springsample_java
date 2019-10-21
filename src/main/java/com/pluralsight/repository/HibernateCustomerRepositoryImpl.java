@@ -1,6 +1,7 @@
 package com.pluralsight.repository;
 
 import com.pluralsight.model.Customer;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 //add it to the interface by hand
 // but extract an interface out.  Refactor Interface (name customerRepository and define
 // findAll()
+@Repository("customerRepository")
 public class HibernateCustomerRepositoryImpl implements CustomerRepository {
     @Override
     public List<Customer> findAll(){
